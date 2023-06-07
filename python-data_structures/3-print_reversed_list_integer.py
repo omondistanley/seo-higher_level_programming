@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
-    reversed_list = list.reverse(my_list)
+    if my_list:
     ##create a copy of the given list
-    rList = my_list.copy()
+       rList = my_list.copy()
     ##reverse the list
-    rList.reverse()
+       rList.reverse()
     ##iterate through the list printing
-    for i in rList:
-        print("{:d}".format(i))
+       for i in rList:
+          print("{:d}".format(i))
     

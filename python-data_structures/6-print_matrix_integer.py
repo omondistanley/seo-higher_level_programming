@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     rows = len(matrix)
-    matrix = []
     for i in range(rows):
         columns = len(matrix[i])
         a = []

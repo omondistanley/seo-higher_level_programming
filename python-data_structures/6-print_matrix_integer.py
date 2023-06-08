@@ -7,6 +7,6 @@ def print_matrix_integer(matrix=[[]]):
             if j != columns - 1:
                 separator = ' '
             else:
-                separatoer = ''
+                separator = ''
             print("{:d}".format(matrix[i][j]), end=separator)
         print("")

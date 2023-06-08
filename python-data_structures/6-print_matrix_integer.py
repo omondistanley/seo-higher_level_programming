@@ -3,8 +3,8 @@ def print_matrix_integer(matrix=[[]]):
     rows = len(matrix)
     matrix = []
     for i in range(rows):
-        a = []
         columns = len(matrix[i])
+        a = []
         for j in range(columns):
             k = int(input())
             a.append(k)

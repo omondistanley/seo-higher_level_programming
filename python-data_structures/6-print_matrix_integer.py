@@ -11,4 +11,4 @@ def print_matrix_integer(matrix=[[]]):
         matrix.append(a)
     for i in range(rows):
         for j in range(columns):
-            print("{}{}".format(matrix[i][i]), sep=" ")
+            print("{:d}{:d}".format(matrix[i][j]), sep=" ")

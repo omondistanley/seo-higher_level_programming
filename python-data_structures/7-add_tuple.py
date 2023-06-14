@@ -19,5 +19,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
         element4 = tuple_b[1]
     sum1 = element1 + element3
     sum2 = element2 + element4
-    sumTuple = (sum1, sum2)
+    sumTuple = (element1 + element3, element2 + element4)
     print(sumTuple)

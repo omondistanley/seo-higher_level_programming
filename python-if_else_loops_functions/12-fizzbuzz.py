@@ -9,3 +9,4 @@ def fizzbuzz():
             print("Fizz", sep=" ")
         else:
             print(i, sep=" ")
+            print(end=" ")

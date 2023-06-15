@@ -4,5 +4,6 @@
     Nothing should be imported.
 """
 
+
 class Square:
     """ Empty Square class """

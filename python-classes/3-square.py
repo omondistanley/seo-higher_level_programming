@@ -10,7 +10,7 @@
 class Square:
     """ The square class based on the above comments. """
 
-    def __init__(self,size=0):
+    def __init__(self, size=0):
         """ Initializes the size, to size after ensuring its
         an integer and greater than zero. """
         if type(size) != int:
@@ -23,5 +23,5 @@ class Square:
             self.__size = size
 
     def area(self):
-        area = size * size
+        area = (self._size * self._size)
         return area

@@ -17,11 +17,12 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            """ If the size meets the above conditions, then
-            the square's size is set to size. """
+        if type(size) == int and size >= 0
             self.__size = size
 
     def area(self):
-        area = (self._size * self._size)
-        return area
+        """ Method that gives the area of the square by 
+        multiplying the size. """
+        area = size * size
+        return size
+            

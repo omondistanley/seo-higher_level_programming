@@ -10,7 +10,7 @@ class Square:
     """ The square class with the instance attribute and the
         initalization of the size attribute. """
 
-    def __init__(size, self):
+    def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")
         if value <= 0:

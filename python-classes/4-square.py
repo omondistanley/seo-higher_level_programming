@@ -20,11 +20,11 @@ class Square:
 
     # @property to retrive the size attribute.
     def size(self):
-        return self._size
+        return self.__size
 
     # @property to set the size attribute to a given value.
     def size(self, value):
-        self._size = value
+        self.__size = value
         """ Size must be an integer and greater than zero. """
         if type(value) != int:
             raise TypeError("size must be an integer")

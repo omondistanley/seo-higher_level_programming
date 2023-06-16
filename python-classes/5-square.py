@@ -2,7 +2,7 @@
 """
     A class defining a square with a private instance attribute of
     size, which must hava a setter and getter proprty and be an int
-    greater than 0. 
+    greater than 0.
 """
 
 
@@ -23,7 +23,7 @@ class Square:
     def size(self, value):
         if type(value) == int:
             if value >= 0:
-                self._size = value
+                self.__size = value
             else:
                 raise ValueError("size must be >= 0")
         else:
@@ -32,14 +32,13 @@ class Square:
     def my_print(self):
         """ Prints out the square with the character '#' """
         i, j = (0, 0)
-        if self._size == 0:
+        if self.__size == 0:
             print()
         else:
-            while i < self._size:
-                while j < self._size:
+            while i < self.__size:
+                while j < self.__size:
                     print("#", end="")
                     j = j + 1
                 print()
                 i = i + 1
                 j = 0
-            

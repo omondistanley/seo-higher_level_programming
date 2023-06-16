@@ -9,6 +9,7 @@
 
 class Square:
     """ A class fulfilling the requirements. """
+    
     def __init__(self, size=0):
         """ Method to initialize the size attributes """
             self.__size = size

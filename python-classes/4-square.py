@@ -8,7 +8,7 @@
 
 
 class Square:
-    """ A class fulfilling the requirements. """ 
+    """ A class fulfilling the requirements. """
     def __init__(self, size=0):
         """ Method to initialize the size attributes """
         if type(size) != int:
@@ -17,6 +17,11 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
+    def area(self):
+        """ Method that gives the area of the square by multiplyinh the size. """
+        area = self.__size * self.__size
+        return area
 
     # @property to retrive the size attribute.
     def size(self):
@@ -32,10 +37,3 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-
-    # the method to give the area, after the area is set by the setter value
-    def area(self):
-        """ Method that gives the area of the square by multiplying the
-            size. """
-        area = self.__size * self.__size
-        return area

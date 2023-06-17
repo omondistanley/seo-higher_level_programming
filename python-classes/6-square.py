@@ -11,10 +11,10 @@ class Square:
     """ The square class based on the earlier comments. """
 
     def __init__(self, size=0, position =(0, 0)):
-            """ Initalializes the size and position and sets the to
+        """ Initalializes the size and position and sets the to
                 private. """
-            self.size = size
-            self.position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         area = self.size * self.size
@@ -32,7 +32,6 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-
     def position(self):
         return self.position
 
@@ -46,7 +45,7 @@ class Square:
 
     def my_print(self):
         """ Prints out the square with the character '#' """
-        i,j = 0, 0
+        i, j = 0, 0
         if self.size == 0:
             print()
         else:

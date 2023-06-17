@@ -3,7 +3,7 @@
     A class defining a square based on 5-square class with a private
     instance attribute of size with a getter and setter property, a
     private position attribute, private instance method that returns
-    the area and aa print private instance method.
+    the area and a print private instance method.
 """
 
 
@@ -44,7 +44,6 @@ class Square:
             raise TypeError("position must be a tuple of two integers")
 
     def my_print(self):
-        """ Prints out the square with the character '#' """
         i, j = 0, 0
         if self.size == 0:
             print()

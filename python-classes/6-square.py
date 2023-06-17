@@ -17,13 +17,16 @@ class Square:
         self.position = position
 
     def area(self):
+        # calculates and returns the area of the square.
         area = self.size * self.size
         return area
 
     def size(self):
+        # the size property 
         return self.size
 
     def size(self, value=0):
+        # checks if the value is an integer and grater than 0 to be set
         if type(value) == int:
             if value < 0:
                 raise ValueError("size must be => 0")
@@ -33,9 +36,12 @@ class Square:
             raise TypeError("size must be an integer")
 
     def position(self):
+        # the position property
         return self.position
 
     def position(self, value):
+        # check if the value is a tuple of integers greater than 0 and set to
+        # the being the position
         if (type(value) is not tuple or len(value) != 2 or
                 type(value[0]) != int or type(value[1]) != int or
                 value[0] < 0 or value[1] < 0):

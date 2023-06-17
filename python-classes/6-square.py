@@ -22,7 +22,7 @@ class Square:
         return area
 
     def size(self):
-        # the size property 
+        # the size property
         return self.size
 
     def size(self, value=0):

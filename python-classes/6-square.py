@@ -10,7 +10,7 @@
 class Square:
     """ The square class based on the earlier comments. """
 
-    def __init__(self, size=0, position = (0, 0)):
+    def __init__(self, size=0, position =(0, 0)):
         """ Initalializes the size and position and sets the to
                 private. """
         self.size = size

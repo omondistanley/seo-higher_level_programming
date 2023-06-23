@@ -23,7 +23,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     if len(tuple_b) == 2:
         thirdElement = tuple_b[0]
         fourthElement = tuple_b[1]
-    elif len(tuple_) == 1:
+    elif len(tuple_b) == 1:
         thirdElement = tuple_b[0]
         fourthElement = 0
     else:

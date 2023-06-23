@@ -5,6 +5,9 @@
 
 
 def max_integer(my_list=[]):
-    my_list.sort()
-    largestInt = my_list[-1]
-    return largestInt
+    if len(my_list) == 0:
+        return None
+    else:
+        my_list.sort()
+        largestInt = my_list[-1]
+        return largestInt

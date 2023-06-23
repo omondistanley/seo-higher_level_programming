@@ -4,6 +4,7 @@
     than 2, use 0 for each missing integer and the first
     two if the tuple if bigger than the two tuples. """
 
+
 def add_tuple(tuple_a=(), tuple_b=()):
     # check the length of the tuples:
     # 1. If the length is 0 set each element to 0
@@ -20,19 +21,17 @@ def add_tuple(tuple_a=(), tuple_b=()):
         firstElement = tuple_a[0]
         secondElement = tuple_a[1]
     # second tuple.
-    if len(tuple_b) == 2:
-        thirdElement = tuple_b[0]
-        fourthElement = tuple_b[1]
+    if len(tuple_b) == 0:
+        thirdElement, fourthElement = (0, 0)
     elif len(tuple_b) == 1:
         thirdElement = tuple_b[0]
         fourthElement = 0
     else:
-        thirdElement, fourthElement = (0, 0)
+        thirdElement = tuple_b[0]
+        fourthElement = tuple_b[1]
     # add the elements in the tuples to come up with a new
     # tuple
     firstSum = firstElement + thirdElement
     secondSum = secondElement + fourthElement
     sumTuple = (firstSum, secondSum)
     return sumTuple
-
-

@@ -8,9 +8,8 @@
 
 
 def divisble_by_2(my_list=[]):
+    list = []
     for value in my_list:
-        even = value % 2
-        if even == 0:
-            return True
-        else:
-            return False
+        list.append(value % 2 == 0)
+    return list
+        

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
     A function that finds all the multiples of 2 in a
     list. The function returns a list with true or false,
     depending on whether the integer at the same position in

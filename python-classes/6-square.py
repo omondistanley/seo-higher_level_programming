@@ -43,7 +43,7 @@ class Square:
         # check if the value is a tuple of integers greater than 0 and set to
         # the being the position
         if not isinstance(value, tuple) or len !=2 or type(value[0]) and 
-        type(value[1]) != int or not all(values >= 0 for values in value):
+            type(value[1]) != int or not all(values >= 0 for values in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.position = value

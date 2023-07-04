@@ -9,10 +9,11 @@
 if __name__ == "__main__";
     """ Import the MySQLdb """
     import MySQLdb
-    from sys import argv
+    import argv
 
     # the arguments, username, password and database name and
     # in order.
+    # the argumetns are read from the command line
 
     username = argv[0]
     password = argv[1]
@@ -26,7 +27,7 @@ if __name__ == "__main__";
     
     """ select everything, from states database/file and ordered by
     # state id in ascending order cursor executes the select, from
-    and order by statements """
+    and order by statements/ query """
     
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     

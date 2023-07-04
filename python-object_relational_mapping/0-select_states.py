@@ -26,8 +26,8 @@ if __name__ == "__main__";
     cursor = db.cursor()
     
     """ select everything, from states database/file and ordered by
-    # state id in ascending order cursor executes the select, from
-    and order by statements/ queries """
+        state id in ascending order cursor executes the select, from
+        and order by statements/ queries """
     
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     

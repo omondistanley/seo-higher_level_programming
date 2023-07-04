@@ -8,15 +8,16 @@
 
 import MySQLdb
 import sys
+
 if __name__ == "__main__";
 
     # the arguments, username, password and database name and
     # in order.
     # the argumetns are read from the command line
 
-    username = argv[0]
-    password = argv[1]
-    database = argv[2]
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
 
     # connect to a MySQL server running on a localhost port 3306
     

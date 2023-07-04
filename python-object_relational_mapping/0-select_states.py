@@ -24,12 +24,11 @@ if __name__ == "__main__";
     db = MySQLdb.connect(host = 'localhost', port = 3306,
             user = username, pwd = password, db = database)
     cursor = db.cursor()
-    
-    """
-        select everything, from states database/file and ordered by
-        state id in ascending order cursor executes the select, from
-        and order by statements/ queries.
-    """
+        """
+            select everything, from states database/file and ordered by
+            state id in ascending order cursor executes the select, from
+            and order by statements/ queries.
+        """
     
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     

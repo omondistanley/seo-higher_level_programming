@@ -7,6 +7,7 @@
 """
 
 if __name__ == "__main__";
+    """ Import the MySQLdb """
     import MySQLdb
     from sys import argv
 
@@ -37,6 +38,7 @@ if __name__ == "__main__";
     cursor and database objects. """
     for row in rows:
         print(row)
+
     cur.close()
     db.close()
 

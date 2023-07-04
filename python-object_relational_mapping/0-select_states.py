@@ -7,11 +7,9 @@
 """
 
 
-import MySQLdb
-from sys import argv
-
-
 if __name__ == '__main__';
+    import MySQLdb
+    from sys import argv
     # the arguments, username, password and database name and
     # in order. 
     username = argv[0]

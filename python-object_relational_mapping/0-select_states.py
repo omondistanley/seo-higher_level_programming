@@ -1,45 +1,33 @@
 #!/usr/bin/python3
 """
-    A script listing all states from the database
-    hbtn_0e_0_usa taking 3 arguments; mysql username, mysql
-    password, database name. Must use the MySQLdb module and
-    results must be sorted in ascending order.
+    A script that lists all states in ascending order
+    according to the state.id
 """
 
-import MySQLdb
+import MySQL
 import sys
 
-if __name__ == "__main__";
+if __name__ == "__main__":
+    # the arguments, username, password and database name
+    # arguments are read from the command line args
+    username = sys.argv[0]
+    password = sys.argv[1]
+    database = sys.argv[2]
 
-    # the arguments, username, password and database name and
-    # in order.
-    # the argumetns are read from the command line
+    # create a database object that connects to MySQL and a
+    # localhost and port 3306.
 
-    username = argv[1]
-    password = argv[2]
-    database = argv[3]
-
-    # connect to a MySQL server running on a localhost port 3306
-    
-    db = MySQLdb.connect(host = 'localhost', port = 3306,
-            user = username, pwd = password, db = database)
+    db = MySQL.connect(host = 'localhost', port = 3306, user=
+            username, pwd = password, dAtaBAsE = database)
+    # create a cursor object connected to the database.
     cursor = db.cursor()
-    # select everything, from states database/file and ordered by
-    # state id in ascending order cursor executes the select, from
-    # and order by statements/ queries.
-    
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-    
-    # gets all rows from a cursor object
-    
+    # executing a query with selecting from the states and is
+    # ordered by the state id in ascending order
+    cursor.execute("SELECT * FROM states ORDER BY state.id ASC")
+    # fetch all rows for printing after the query.
     rows = cursor.fetchall()
-    
-    # iterates through and prints out all the rows, then close the
-    # cursor and database objects.
     for row in rows:
         print(row)
 
     cursor.close()
     db.close()
-
-    

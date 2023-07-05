@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     # execute a query that selects from the database states
     # whose names start with N and returns in ascending order
-    query1 = "SELECT * FROM states WHERE names LIKE 'N%' "
+    query1 = "SELECT * FROM states WHERE BINARY name LIKE 'N%' "
     query2 = "ORDER BY states."
     query = query1 + query2
     cursor.execute(query)

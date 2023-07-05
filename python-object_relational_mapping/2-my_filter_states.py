@@ -20,3 +20,7 @@ if __name__ = "__main__":
                         password=password, database=database,
                         stateName=stateName)
 
+    cursor = db.cursor()
+    # query that executes to select from the database the states
+    # whose name is the same as the state name searched by the user.
+    cursor.execute("SELECT * FROM states WHERE name==stateName")

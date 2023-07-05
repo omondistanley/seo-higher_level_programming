@@ -16,7 +16,7 @@ if __name__ == "__main__":
     database = argv[3]
 
     # connecting the module to a local MySQL server running
-    # on port 3306. 
+    # on port 3306.
     db = MySQLdb.connect(host='localhost', port=3306,
                          user=username, password=password,
                          database=database)
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     # execute a query that selects from the database states
     # whose names start with N and returns in ascending order
     query1 = "SELECT * FROM states WHERE names LIKE 'N%' "
-    query2 =  "ORDER BY states."
+    query2 = "ORDER BY states."
     query = query1 + query2
     cursor.execute(query)
     # fetch all rows for printing after the query.
@@ -37,4 +37,3 @@ if __name__ == "__main__":
     # close the cursor and db objects.
     cursor.close()
     db.close()
-

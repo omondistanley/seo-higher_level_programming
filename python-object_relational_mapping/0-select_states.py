@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     # executing a query with selecting from the states and is
     # ordered by the state id in ascending order
-    cursor.execute("SELECT * FROM states ORDER BY state.id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     # fetch all rows for printing after the query.
     rows = cursor.fetchall()
     for row in rows:

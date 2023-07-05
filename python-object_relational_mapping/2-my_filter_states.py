@@ -18,9 +18,17 @@ if __name__ = "__main__":
     # connect the module to a local host at port 3306
     db =MySQLdb.connect(host='localhost', port=3306, user=username
                         password=password, database=database,
-                        stateName=stateName)
+                    stateName=stateName)
 
     cursor = db.cursor()
     # query that executes to select from the database the states
     # whose name is the same as the state name searched by the user.
     cursor.execute("SELECT * FROM states WHERE name==stateName")
+    # fetch all the rows after the query.
+    rows = cursor.fetchall()
+
+    for row in rows:
+        print(row)
+  
+cursor.close()
+    db.close()

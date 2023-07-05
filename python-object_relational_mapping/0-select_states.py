@@ -5,7 +5,7 @@
     according to the state.id
 """
 
-from MySQL __import__ MySQLdb
+from MySQLdb __import__ MySQLdb
 __import__ sys
 if __name__ == "__main__":
     # the arguments, username, password and database name

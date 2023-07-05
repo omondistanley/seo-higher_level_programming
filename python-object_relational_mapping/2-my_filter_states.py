@@ -10,6 +10,7 @@ from sys import argv
 if __name__ = "__main__":
     # the arguments username, password, database and state name
     # searched are taken in as command line arguments.
+    
     username = argv[1]
     password = argv[2]
     database = argv[3]
@@ -30,5 +31,5 @@ if __name__ = "__main__":
     for row in rows:
         print(row)
   
-cursor.close()
+    cursor.close()
     db.close()

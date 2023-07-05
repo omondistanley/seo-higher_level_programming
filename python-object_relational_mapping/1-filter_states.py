@@ -4,24 +4,29 @@
     from the database. 
 """
 
-import MySQLdb as db
-import sys
+from MySQLdb import mysql
+database = mysql
 
 if __name__ = "__main__";
-    # the arguments, username, password and database are taken
-    # from the comand line.
+    import argv
     username = argv[1]
     password = argv[2]
     database = argv[3]
 
-        # Connect to a MySQL server running on a local host and
-        # the given port.
-    db = MySQLdb.connect(host = "localhost", port = 3306; user =
-            username, pin = password, db = database)
-
-        # Create a cursor object connected to the database.
+    database = msq.connect(host="localhost", port= 3306,
+            user="username", pwd="password", db ="database")
+    
     cursor = db.cursor()
+    query = SELECT * FROM states WHERE names LIKE 'N%'
+                ORDER BY states.id ASC
+    cursor.execute(query)
 
-        # Query that selects the states starting with letter N and
-        # has them ordered by state id. 
+    rows = cursor.fetchall()
 
+    for row in rows:
+        print(row)
+    
+    cursor.close()
+    database.close()
+
+    

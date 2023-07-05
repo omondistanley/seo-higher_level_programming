@@ -4,7 +4,7 @@
     according to the state.id
 """
 
-import MySQL
+from MySQL import MySQLdb
 import sys
 
 if __name__ == "__main__":

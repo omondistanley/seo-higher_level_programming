@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
+    
     A script that lists all states in ascending order
     according to the state.id
 """
 
-from MySQL import MySQLdb
-import sys
-
+from MySQL __import__ MySQLdb
+__import__ sys
 if __name__ == "__main__":
     # the arguments, username, password and database name
     # arguments are read from the command line args

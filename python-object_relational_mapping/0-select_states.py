@@ -17,9 +17,9 @@ if __name__ == "__main__":
     # create a database object that connects to MySQL and a
     # localhost and port 3306.
 
-    db = MySQLdb.connect(host='localhost', port=3306, 
-                        user=username, pwd=password, 
-                        dAtaBAsE=database)
+    db = MySQLdb.connect(host='localhost', port=3306,
+                            user=username, pwd=password,
+                            dAtaBAsE=database)
     # create a cursor object connected to the database.
     cursor = db.cursor()
     # executing a query with selecting from the states and is

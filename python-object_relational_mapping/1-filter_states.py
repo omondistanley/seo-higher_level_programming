@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     # execute a query that selects from the database states
     # whose names start with N and returns in ascending order
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'"
+    cursor.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%'"
                    "ORDER BY states.id")
     # fetch all rows for printing after the query.
     rows = cursor.fetchall()

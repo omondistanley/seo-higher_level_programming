@@ -26,8 +26,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
     # execute a query that selects from the states those
     # whose names are the same as the argument provided.
-    cursor.execute("SELECT * FROM states WHERE name == stateName"
-                   "ORDER BY states.id")
+    cursor.execute("SELECT * FROM states WHERE name == {}"
+                   "ORDER BY states.id".format(stateName))
     # fetch all rows for printing after the query.
     rows = cursor.fetchall()
     # iterate through the rows, and print each out.

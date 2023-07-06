@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # Using the cursor's execute function, execute a query
     # that selects from the states whose names are same as
     # the one provided.
-    cursor.execute("SELECT * FROM states WHERE BINARY name = '@%S'"
+    cursor.execute("SELECT * FROM states WHERE BINARY name = '@%s'"
                    "ORDER BY states.id".format(stateName))
     # fetch all the rows for printing after the query.
     rows = cursor.fetchall()

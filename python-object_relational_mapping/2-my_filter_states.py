@@ -24,7 +24,8 @@ if __name__ = "__main__":
     cursor = db.cursor()
     # query that executes to select from the database the states
     # whose name is the same as the state name searched by the user.
-    cursor.execute("SELECT * FROM states WHERE name==stateName")
+    cursor.execute("SELECT * FROM states WHERE name==stateName"
+                    "ORDER BY states.id")
     # fetch all the rows after the query.
     rows = cursor.fetchall()
     # iterate to print each row in the fetched rows after the query

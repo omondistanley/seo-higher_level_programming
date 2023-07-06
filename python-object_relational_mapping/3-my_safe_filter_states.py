@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # that selects from the states whose names are same as
     # the one provided.
     cursor.execute("SELECT * FROM states WHERE name = '{:s}'"
-                   "ORDER BY states.id ASC".format(stateName))
+                   "ORDER BY states.id ASC", (stateName,))
     # fetch all the rows for printing after the query.
     rows = cursor.fetchall()
     # iterate through the rows and print the outcome.

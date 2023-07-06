@@ -26,9 +26,9 @@ if __name__ == "__main__":
     # Using the cursor's execute function, execute a query
     # that returns the cities ordered in ascending order by
     # the id of the cities.
-    cursor.execute("SELECT cities.id, cities.name, states.name"
-                   "FROM cities JOIN states ON cities.states_id = states.id"
-                   "ORDER BY cities.id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name
+                   FROM cities JOIN states ON cities.states_id = states.id
+                   ORDER BY cities.id ASC")
 
     # Fetch all rows after the query
     rows = cursor.fetchall()

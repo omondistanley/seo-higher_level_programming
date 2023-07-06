@@ -27,9 +27,8 @@ if __name__ == "__main__":
     # that returns the cities ordered in ascending order by
     # the id of the cities.
     cursor.execute("SELECT cities.id, cities.name, states.name"
-                   "FROM cities JOIN states\
-                    ON cities.states_id = states.id\
-                    ORDER BY cities.id ASC")
+                   "FROM cities JOIN states ON cities.states_id = states.id"
+                   "ORDER BY cities.id ASC")
 
     # Fetch all rows after the query
     rows = cursor.fetchall()

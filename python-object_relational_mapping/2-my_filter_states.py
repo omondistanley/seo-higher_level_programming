@@ -16,10 +16,10 @@ if __name__ = "__main__":
     database = argv[3]
     stateName = argv[4]
 
-    # connect the module to a local host at port 3306
+    # connecting the module to a local host server
+    # running on port 3306
     db =MySQLdb.connect(host='localhost', port=3306, user=username
-                        password=password, database=database,
-                    stateName=stateName)
+                        password=password, database=database)
     # create a cursor object for the database
     cursor = db.cursor()
     # query that executes to select from the database the states

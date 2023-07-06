@@ -40,7 +40,6 @@ if __name__ == "__main__":
         final.append(queryExecuted[i][0])
 
     print(', '.join(final))
-    
 
     # Close the cursor object.
     cursor.close()

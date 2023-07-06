@@ -26,7 +26,7 @@ if __name__ = "__main__":
     cursor = db.cursor()
     # Use the cursor to  execute an SQL query that selects from the
     # states those whose names are the same as the argument providaed.
-    # NOTE: The query should be SQL injection free.
+    # The query should be SQL injection free.
     cursor.execute("SELECT * FROM states WHERE BINARY name = '@%s'"
                    "ORDER BY states.id ASC")
     # fetch all the rows after the query

@@ -36,10 +36,10 @@ if __name__ == "__main__":
     final = []
     # iterate through the results from the execution of the query,
     # adding them to the array.
-    # for i in range(queryExecuted):
-      #  final.append(queryExecuted[i][0])
-    #print(', '.join(final))
-    print(', '.join(row[1] for row in rows)
+         for i in range(queryExecuted):
+        final.append(queryExecuted[i][0])
+    print(', '.join(final))
+
     # Close the cursor object.
     cursor.close()
     db.close()

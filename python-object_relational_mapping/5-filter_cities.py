@@ -37,7 +37,7 @@ if __name__ == "__main__":
     # iterate through the results from the execution of the query,
     # adding them to the array.
     for i in range(queryExecuted):
-        final.append(queryExecuted[i])
+        final.append(rows[i][0])
         print(', '.join(final))
 
     # Close the cursor object.

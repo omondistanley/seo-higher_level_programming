@@ -1,37 +1,39 @@
 #!/usr/bin/python3
 """
-    A script that returns the states whose names
-    are the same as the one provided by the user.
-    The script results are returned in asc order.
+    A script that takes an argument and returns
+    values in the states table where the name
+    matches the argument provided.
 """
 
 import MySQLdb
 from sys import argv
 
-if __name__ = "__main__":
-    # the arguments username, password, database and state name
-    # searched are taken in as command line arguments.
+if __name__ == "__main__":
+    # the script takes four arguments read in from
+    # the command line as command line arguments.
     username = argv[1]
     password = argv[2]
     database = argv[3]
     stateName = argv[4]
 
-    # connecting the module to a local host server
-    # running on port 3306
-    db =MySQLdb.connect(host='localhost', port=3306, user=username
-                        password=password, database=database)
-    # create a cursor object for the database
+    # Connect the module to a local host serve that
+    # is at port 3306
+    db = MySQLdb.connect(host='localhost', port=3306,
+                         user=username, password=password,
+                         database=database)
+    # Create a cursor object for the db that executes the
+    # SQL queries.
     cursor = db.cursor()
-    # query that executes to select from the database the states
-    # whose name is the same as the state name searched by the user.
-    cursor.execute("SELECT * FROM states WHERE name==stateName"
-                    "ORDER BY states.id")
-    # fetch all the rows after the query.
+    # execute a query that selects from the states those
+    # whose names are the same as the argument provided.
+    cursor.execute("SELECT * FROM states WHERE name == stateName"
+                   "ORDER BY states.id")
+    # fetch all rows for printing after the query.
     rows = cursor.fetchall()
-    # iterate to print each row in the fetched rows after the query
+    # iterate through the rows, and print each out.
     for row in rows:
         print(row)
 
-    # close the cursor and db
+    # Close the cursor object and the db.
     cursor.close()
     db.close()

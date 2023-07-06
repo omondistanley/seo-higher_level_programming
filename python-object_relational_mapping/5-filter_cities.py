@@ -8,7 +8,7 @@
 import MySQLdb
 from sys import argv
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     # The script takes in four arguments read in from the
     # command line
     username = argv[1]

@@ -26,14 +26,21 @@ if __name__ == "__main__":
     # Using the cursor's execute function, select from the list
     # the states whose names match the argument provided and return
     # their cities.
-    cursor.execute("SELECT cities.id, cities.name, states.name\
+    queryExecuted = cursor.execute("SELECT cities.id, cities.name, states.name\
                    FROM cities JOIN states ON cities.state_id = states.id\
                    WHERE states.name = '{}'\
                    ORDER BY cities.id ASC".format(stateName))
     # Fetch all rows after executing the query.
     rows = cursor.fetchall()
+    # create an array
+    final = []
+    # iterate through the results from the execution of the query,
+    # adding them to the array.
+    for row in range(queryExecuted):
+        final.append(queryExecuted[i][0])
 
-    print(", ".join(row[0] for row in rows))
+    print(', '.join(final))
+    
 
     # Close the cursor object.
     cursor.close()

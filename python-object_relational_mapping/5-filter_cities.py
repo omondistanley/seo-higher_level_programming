@@ -27,9 +27,9 @@ if __name__ == "__main__":
     # the states whose names match the argument provided and return
     # their cities.
     cursor.execute("SELECT cities.id, cities.name, states.name\
-                   FROM cities WHERE states.name = '{}'"
-                   "JOIN states ON cities.state_id = states.id"
-                   " ORDER BY cities.id ASC".format(stateName))
+                   FROM cities JOIN states ON cities.state_id = states.id"
+                   "WHERE states.name = '{}'\
+                   ORDER BY cities.id ASC".format(stateName))
     # Fetch all rows after executing the query.
     rows = cursor.fetchall()
 

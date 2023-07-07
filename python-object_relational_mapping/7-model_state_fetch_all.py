@@ -9,4 +9,9 @@ import SQLAlchemy
 from sys import argv
 
 if __name__ == "__main__":
+    # the arguments are taken in from the command line.
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
+
 

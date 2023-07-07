@@ -7,7 +7,7 @@
 
 
 from sys import argv
-from model_state import Base, State
+from model_state import base, state
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -22,7 +22,7 @@ if __name__ == "__main__":
                            .format(username, password, database))
 
     # Create a session class that is bound to the engine object.
-    Session = sessionnmaket(bind=engine)
+    Session = sessionnmaker(bind=engine)
 
     # Create an instance of the session class that queries all the
     # inherited state objects and orders them by state id.

@@ -17,16 +17,15 @@ if __name__ == "__main__":
     password = argv[2]
     database = argv[3]
     # Connect the script to the localhost at port and has a parameter
-    # that pings the database before each checkout to ensure its working.
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(username, password, database),
-                           pool_pre_ping =True)
+                           .format(username, password, database))
     # Create a session class that is bound to the engine obj
     Session = sessionmaker(bind=engine)
     # Create an instance of the the Session class that quaries all
     # inherited state objects and orders them by state id.
     thisSession = Session()
-    results = thisSession.query(State).order_by(State.id).all()
+
+    results = thisSession.query(State).order_by(State.id)
     # iterate through the results after query and print the state name&id.
     for result in results:
-        print("{} {}".format(result.id, result.name))
+        print("{}: {}".format(result.id, result.name))

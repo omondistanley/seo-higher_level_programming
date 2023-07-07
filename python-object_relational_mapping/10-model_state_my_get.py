@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # Connect the script to the localhost at port.
     stateName = argv[4]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(argv[1], argv[2], argv[3], 
+                           .format(argv[1], argv[2], argv[3],
                                    argv[4]))
     # Create a session class that is bound to the engine
     Session = sessionmaker(bind=engine)

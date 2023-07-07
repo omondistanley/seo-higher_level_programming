@@ -28,10 +28,10 @@ if __name__ == "__main__":
     session = Session()
     result = session.query(State).order_by(State.id).first()
     # fetch the first row from the results of the query
-    row =result.first()
+    # row = result.first()
     # Check if the row from the result is empty, if so print nothing
     # Else, fetch one row, and print the state id and name out.
-    if row is None:
+    if result is None:
         print("Nothing")
     else:
-        print('{}: {}'.format(row.id, row.name))
+        print('{}: {}'.format(result.id, result.name))

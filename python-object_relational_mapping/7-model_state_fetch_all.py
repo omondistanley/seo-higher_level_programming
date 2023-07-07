@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """
     A script that lists all the state objects from the database.
     The script should take three arguments, uses SQLAlchemy and

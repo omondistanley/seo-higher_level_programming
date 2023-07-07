@@ -10,6 +10,8 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
+
+
 class State(Base):
     """
         the class should be mapped to a table named states in the database

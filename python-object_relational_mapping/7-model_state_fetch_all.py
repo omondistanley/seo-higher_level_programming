@@ -24,8 +24,6 @@ if __name__ == "__main__":
     # Create an instance of the the Session class that quaries all
     # inherited state objects and orders them by state id.
     thisSession = Session()
-
-    results = thisSession.query(State).order_by(State.id)
     # iterate through the results after query and print the state name&id.
-    for state in results:
-        print("{0}: {1}".format(state.id, state.name))
+    for state in thisSession.query(State).order_by(State.id):
+        print('{}: {}'.format(state.id, state.name))

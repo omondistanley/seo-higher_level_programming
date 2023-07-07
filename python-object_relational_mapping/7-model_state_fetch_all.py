@@ -7,7 +7,7 @@
 
 
 from sys import argv
-from model_state import base, state
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -32,4 +32,4 @@ if __name__ == "__main__":
     # Iterate through the results after query and print the state
     # name and id.
     for state in results:
-        print"{0}{1}".format(state.id, state.name))
+        print"{0}: {1}".format(state.id, state.name))

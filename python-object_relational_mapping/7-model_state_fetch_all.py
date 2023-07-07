@@ -18,8 +18,7 @@ if __name__ == "__main__":
     database = argv[3]
     # Connect the script to the localhost at port and has a parameter
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(username=username, password=password,
-                            database=database))
+                           .format(argv[1], argv[2], argv[3]))
     # Create a session class that is bound to the engine obj
     Session = sessionmaker(bind=engine)
     # Create an instance of the the Session class that quaries all

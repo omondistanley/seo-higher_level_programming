@@ -22,4 +22,10 @@ Base = declarative_base():
 
 class State(Base):
     # set the module it script is imported.
-    if __name__ = "__main__":
+    if __name__ = "__states__":
+        # the id attribute represents a column set to a non-null 
+        # integer and is the primary key(primary key set to true)
+        id = Column(Integer, primary_key = True)
+        # The class attribute represents a column with a string of
+        # with 128 maximum characters and can't be null.
+        class = Column(sqlalchemy.String(128), nullable = False)

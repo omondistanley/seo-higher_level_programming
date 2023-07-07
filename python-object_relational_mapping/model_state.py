@@ -28,4 +28,4 @@ class State(Base):
         id = Column(Integer, primary_key = True)
         # The class attribute represents a column with a string of
         # with 128 maximum characters and can't be null.
-        class = Column(sqlalchemy.String(128), nullable = False)
+        class = Column(String(128), nullable = False)

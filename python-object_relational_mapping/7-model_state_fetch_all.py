@@ -6,12 +6,12 @@
 """
 
 
-if __name__ == "__main__":
-    from sys import argv
-    from model_state import Base, State
-    from sqlalchemy import create_engine
-    from sqlalchemy.orm import sessionmaker
+from sys import argv
+from model_state import Base, State
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
+if __name__ == "__main__":
     # the arguments are taken in from the command line.
     username = argv[1]
     password = argv[2]

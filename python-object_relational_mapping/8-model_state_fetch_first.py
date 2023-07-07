@@ -23,12 +23,11 @@ if __name__ == "__main__":
     # Create an instance of the session class that queries all the
     # inherited state objects and order them by state id.
     session = Session()
-    if session.query(State).count > 0:
-        result = session.query(State).order_by(State.id).first()
-        print("{}: {}".format(result.id, result.name))
-    else:
-        print("Nothing")
-    # fetch the first row from the results of the query
-    # row = result.first()
-    # Check if the row from the result is empty, if so print nothing
+    result = session.query(State).order_by(State.id).first()
+    
+    # Check if the row from the result is empty, print nothing
     # Else, fetch one row, and print the state id and name out.
+    if result is None:
+        print("Nothing")
+    else:
+        print("{}:{}".format(result.id, result.name))

@@ -9,26 +9,26 @@
 if __name__ == "__main__":
     from sys import argv
     from model_state import Base, State
-    import SQLAlchemy
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+
     # the arguments are taken in from the command line.
     username = argv[1]
     password = argv[2]
     database = argv[3]
 
-    db = SQLAlchemy.connect(host='localhost', port=3306,
-                            user=username, password=password,
-                            database=datase)
-    # Create a cursor object connected to the database connecting
-    # the script to the localhost server.
-    cursor = db.cursor()
-    # Use the execute function of the cursor to execute a query
-    # that returns the results in acending order.
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-    # Fetch all rows printing after the query
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    # Connect the script to the localhost server and port 3306.
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(username, password, database))
+    # Create a session class that is bound to the engine object.
+    Session = sessionmaker(bind=engine)
 
-    # Close the cursor.
-    cursor.close()
-    db.close()
+    # Create a an instance of the session class that queries all
+    # the inherited state objects and orders them by state id.
+    instance_of_Session = Session()
+    stateResults = instance_of_Session.query(State).ORDER BY(states.id)
+
+    # Iterate through the state results after query and print the state
+    # name and id
+    for state in stateResults:
+        print("{}{}".format(state.id, state.name))

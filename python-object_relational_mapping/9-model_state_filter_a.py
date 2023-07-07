@@ -23,6 +23,6 @@ if __name__ == "__main__":
     session = Session()
     # The query checks and filters with those with letter a
     states = session.query(State).filter(State.name.contains('a'))
-    
+
     for state in states:
         print("{}: {}".format(state.id, state.name))

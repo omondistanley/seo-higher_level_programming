@@ -20,7 +20,7 @@ class City(Base):
    __tablename__ = 'cities'
    # The id attribute represents a column to a non-null integer and is the
    # primary key. ie. primary key is set to true.
-   id = Column(Integer, primary_key=True)
+   id = Column(Integer, primary_key=True, nullable=False)
    
    # The name attribute with a string which holds amazimum of 128 characters
    # and can't be null. ie> nullable is set to false

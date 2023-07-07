@@ -27,4 +27,4 @@ if __name__ == "__main__":
     results = thisSession.query(State).order_by(State.id)
     # iterate through the results after query and print the state name&id.
     for result in results:
-        print("{0} {1}".format(result.id, result.name))
+        print("{} {}".format(result.id, result.name))

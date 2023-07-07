@@ -23,4 +23,4 @@ if __name__ == "__main__":
     session = Session()
     # iterate through the results after query and print the state name&id.
     for state in session.query(State).order_by(State.id):
-       print('{}: {}'.format(state.id, state.name))
+        print('{}: {}'.format(state.id, state.name))

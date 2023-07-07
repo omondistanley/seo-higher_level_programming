@@ -39,7 +39,7 @@ if __name__ == "__main__":
     # for i in range(queryExecuted):
     #  final.append(rows[i][0])
     #  print(', '.join(final))
-    print(", ".join(row[0] for row in rows))
+    print(", ".join(row[1] for row in rows))
 
     # Close the cursor object.
     cursor.close()

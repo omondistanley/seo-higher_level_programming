@@ -21,7 +21,7 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysql://{}:{}@localhost/{}'
                            .format(username, password, database))
     # Create a session class bound to the engine obj.
-    Session= sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
 
     # Create an instance of the session class that queries all the
     # inherited state objects and order them by state id.
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     row = result.fetchone()
     # Check if the results of the query is empty, if so print nothing
     # Else, fetch one row, and print the state id and name out.
-    if row == None:
+    if row is None:
         print("Nothing")
     else:
         print('{}: {}'.format(state.id, state.name))

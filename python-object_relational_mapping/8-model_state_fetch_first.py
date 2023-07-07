@@ -6,20 +6,17 @@
 """
 
 
-from sys import argv
+import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    # The arguments are taken in from the command line.
-    username = argv[1]
-    password = argv[2]
-    database = argv[3]
+    # The arguments are taken in from the command line
     # Connect the script to a MySQL server on a localhost using the
     # engine object.
     engine = create_engine('mysql+mysql://{}:{}@localhost/{}'
-                           .format(username, password, database))
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     # Create a session class bound to the engine obj.
     Session = sessionmaker(bind=engine)
 

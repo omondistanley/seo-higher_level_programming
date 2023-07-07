@@ -12,7 +12,9 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 class State(Base):
-    # the class should be mapped to a table named states in the database
+    """
+        the class should be mapped to a table named states in the database
+    """
     __tablename__ = 'states'
     # the id attribute representing a column set to a non-null integer
     # and is the primary key(primary key set to true)

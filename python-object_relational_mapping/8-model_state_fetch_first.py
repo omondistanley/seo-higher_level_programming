@@ -34,4 +34,5 @@ if __name__ == "__main__":
     if row is None:
         print("Nothing")
     else:
+        state = row[0]
         print('{}: {}'.format(state.id, state.name))

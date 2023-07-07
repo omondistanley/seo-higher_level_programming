@@ -24,7 +24,7 @@ if __name__ == "__main__":
     # inherited state objects and order them by state id.
     session = Session()
     result = session.query(State).order_by(State.id).first()
-    
+
     # Check if the row from the result is empty, print nothing
     # Else, fetch one row, and print the state id and name out.
     if result is None:

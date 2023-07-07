@@ -22,7 +22,7 @@ Base = declarative_base():
 
 class State(Base):
     # set the module it script is imported.
-     __tablename__ = "__states__":
+     __tablename__ = 'states':
         # the id attribute represents a column set to a non-null 
         # integer and is the primary key(primary key set to true)
         id = Column(Integer, primary_key = True)

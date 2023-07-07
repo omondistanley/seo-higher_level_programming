@@ -16,9 +16,11 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     database = argv[3]
-    # Connect the script to the localhost at port
+    # Connect the script to the localhost at port and has a parameter
+    # that pings the database before each checkout to ensure its working.
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(username, password, database))
+                           .format(username, password, database),
+                           pool_pre_ping =True)
     # Create a session class that is bound to the engine obj
     Session = sessionmaker(bind=engine)
     # Create an instance of the the Session class that quaries all

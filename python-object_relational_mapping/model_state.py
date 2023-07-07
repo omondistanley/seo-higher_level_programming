@@ -15,8 +15,11 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
+
 Base = declarative_base():
 
 
 
 class State(Base):
+    # set the module it script is imported.
+    if __name__ = "__main__":

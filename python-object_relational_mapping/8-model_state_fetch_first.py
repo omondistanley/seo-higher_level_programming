@@ -27,12 +27,11 @@ if __name__ == "__main__":
     # inherited state objects and order them by state id.
     instance_session = Session()
     result = instance_session.query(State).order_by(State.id)
-    # fetch one row from the results of the query
-    row = result.fetchone()
-    # Check if the results of the query is empty, if so print nothing
+    # fetch the first row from the results of the query
+    row = result.first()
+    # Check if the row from the result is empty, if so print nothing
     # Else, fetch one row, and print the state id and name out.
     if row is None:
         print("Nothing")
     else:
-        state = row[0]
-        print('{}: {}'.format(state.id, state.name))
+        print('{}: {}'.format(row.id, row.name))

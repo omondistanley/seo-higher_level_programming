@@ -1,31 +1,23 @@
 #!/usr/bin/python3
 """
-    A class that contains the definition of a state and an
-    instance base. The class inherits from Base, links to
-    MySQL table, the class has an id attribute that represents
-    a column of an auto generated unique integer that is the
-    primary key. The class also has a name attribute representing
-    a column of a string with max of 128 characters.
-    Both attributes aren't null.
+    A class that contains the definition of state and sn instance
+    base. The class inherits from base, links to MySQL table and has
+    two attributes, id and class.
 """
 
-
-# import the sqlachemy, and from the sqlalchemy, import
-# declarative base. 
+# from the sqlalchemy, import Column, integer, string and declarative
+# base.
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-
-Base = declarative_base():
-
-
+Base = declarative_base()
 
 class State(Base):
-    # set the module it script is imported.
-     __tablename__ = 'states':
-        # the id attribute represents a column set to a non-null 
-        # integer and is the primary key(primary key set to true)
+    # the class should be mapped to a table named states in the database
+    __table__ = 'states'
+        # the id attribute representing a column set to a non-null integer
+        # and is the primary key(primary key set to true)
         id = Column(Integer, primary_key = True)
-        # The class attribute represents a column with a string of
-        # with 128 maximum characters and can't be null.
-        class = Column(String(128), nullable = False)
+        # The class attribute with a string which holds a maximum of 128
+        # characters and can't be null(nullable value set to false.)
+        name = Column(String(128), nullable = False)

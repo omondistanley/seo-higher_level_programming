@@ -15,7 +15,7 @@ if __name__ == "__main__":
     password = argv[2]
     database = argv[3]
 
-    db = SQLAlchemy.connect(host='localhost', port = 3306,
+    db = SQLAlchemy.connect(host='localhost', port=3306,
                             user=username, password=password,
                             database=datase)
     # Create a cursor object connected to the database connecting

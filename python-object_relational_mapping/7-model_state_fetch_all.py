@@ -6,7 +6,7 @@
 """
 
 
-from sys import argv
+import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # the arguments are taken in from the command line
     # Connect the script to the localhost at port.
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(argv[1], argv[2], argv[3]))
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     # Create a session class that is bound to the engine obj
     Session = sessionmaker(bind=engine)
     # Create an instance of the the Session class that quaries all

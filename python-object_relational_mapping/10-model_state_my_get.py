@@ -21,9 +21,9 @@ if __name__ == "__main__":
     session = Session()
     # The query checks and gives the state with the same name as
     # the argument provided.
-    states = session.query(State).filter(State.name == argv[4])
+    states = session.query(State).filter(State.name == argv[4]).first()
     # Check if the state is found, if not print not found
     if states is None:
         print("Not found")
     else:
-        print(state.id)
+        print(states.id)

@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # create an instance of the session class used to change the object at
     # id 2.
     session = Session()
-    state = session.query(State).filter(State.id == 2).first()
+    state = session.query(State).filter_by(id=2).first()
     # Update the name to new Mexico.
     state.name = "New Mexico"
 

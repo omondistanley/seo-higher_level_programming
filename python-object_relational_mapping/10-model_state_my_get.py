@@ -12,11 +12,9 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     # The arguments are taken in from the command line
-    # Connect the script to the localhost at port.
-    stateName = argv[4]
+    # Connect the script to the localhost at port 3306
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(argv[1], argv[2], argv[3],
-                                   argv[4]))
+                           .format(argv[1], argv[2], argv[3]))
     # Create a session class that is bound to the engine
     Session = sessionmaker(bind=engine)
     # Create an instance of a session class that queries the state objs.

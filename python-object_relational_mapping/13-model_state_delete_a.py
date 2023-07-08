@@ -13,7 +13,7 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     # the script takes three arguments, is connected to a MySQL server running
     # on a localhost and isn't execturable when imported.
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(argv[1], argv[2], argv[3]))
     #Create a session class
     Session = sessionmaker(bind=engine)

@@ -10,6 +10,7 @@
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import ForeignKey
 
 Base = declarative_base()
 
@@ -27,4 +28,4 @@ class City(Base):
    name = Column(String(128), nullable=False)
    # The state_id attribute repersenting a column of an integer which is a
    # foreign key to the states.id and can't be null
-   state_id = Column(Integer, ForeignKey(states.id), nullable=False)
+   state_id = Column(Integer, ForeignKey('states.id'), nullable=False)

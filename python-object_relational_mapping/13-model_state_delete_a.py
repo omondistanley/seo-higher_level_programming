@@ -20,11 +20,11 @@ if __name__ == "__main__":
     # Use an instance of the session class to query the State objects,
     # filtering those with letter 'a'
     session = Session()
-    deleted_states = session.query(State).filter(State.name.contains('a')).all()
+    del_states = session.query(State).filter(State.name.contains('a')).all()
 
     # iterate through the deleted states and using the delete function delete
     # each of the states.
-    for state in deleted_states:
+    for state in del_states:
         session.delete(state)
 
     # Commit the changes done during the session.

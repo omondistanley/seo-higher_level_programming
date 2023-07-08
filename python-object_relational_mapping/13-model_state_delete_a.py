@@ -15,10 +15,10 @@ if __name__ == "__main__":
     # on a localhost and isn't execturable when imported.
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(argv[1], argv[2], argv[3]))
-    #Create a session class
+    # Create a session class
     Session = sessionmaker(bind=engine)
-    # Use an instance of the session class to query the State objects, filtering
-    # those with letter 'a'
+    # Use an instance of the session class to query the State objects,
+    # filtering those with letter 'a'
     session = Session()
     deleted_states = session.query(State).filter(State.name.contains('a'))
 

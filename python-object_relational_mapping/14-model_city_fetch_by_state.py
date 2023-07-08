@@ -25,10 +25,10 @@ if __name__ == "__main__":
     session = Session()
     # Use the instance session to query to for the cities and
     # arrange in order
-    states = session.query(State, City.id, City).filter(
-            City.state.id == State.id).order_by(City.id)
-    # Iterate through the rows in the states
-    for row in states:
+    cities_list = session.query(State).order_by(City.id).all()
+    # Iterate through the list of cities and print by state
+    for city in cities_list:
+        state = session.query(State).filter_by(State.id == city.state.id).first()
         print(f"{row.State.name}: ({row.id} {row.City.name}")
     # Close the session.
     session.close()

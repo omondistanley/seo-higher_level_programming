@@ -5,7 +5,7 @@
 """
 
 
-from sys import argv
+import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     # Script takes in 3 arguments and connect the script to a localhost
     # using engine obj
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(argv[1], argv[2], argv[3]))
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     # create a session class bound to the engine object
     Session = sessionmaker(bind=engine)
     # create an instance of the session class used to change the object at

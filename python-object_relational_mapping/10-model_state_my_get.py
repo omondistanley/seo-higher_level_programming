@@ -25,7 +25,7 @@ if __name__ == "__main__":
     # the argument provided.
     states = sesssion.query(State).filter(State.name == argv[4])
     # Check if the state is found, if not print not found
-    if states is not None:
-        print("{}".format(state.id))
-    else:
+    if states is None:
         print("Not found")
+    else:
+        print(state.id)

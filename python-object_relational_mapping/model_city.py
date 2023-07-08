@@ -9,9 +9,8 @@
 
 
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from model_state import Base
 from sqlalchemy.orm import ForeignKey
-from model_state import Base, State
 
 Base = declarative_base()
 

@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # Use an instance of the session class to query the State objects,
     # filtering those with letter 'a'
     session = Session()
-    deleted_states = session.query(State).filter(State.name.contains('a'))
+    deleted_states = session.query(State).filter(State.name.contains('a')).all()
 
     # iterate through the deleted states and using the delete function delete
     # each of the states.

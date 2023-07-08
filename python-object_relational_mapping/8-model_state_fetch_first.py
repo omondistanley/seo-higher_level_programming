@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # The arguments are taken in from the command line
     # Connect the script to a MySQL server on a localhost using the
     # engine object.
-    engine = create_engine('mysql+mysql://{}:{}@localhost:3306/{}'
+    engine = create_engine('mysql+mysql://{}:{}@localhost/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     # Create a session class bound to the engine obj.
     Session = sessionmaker(bind=engine)
@@ -23,8 +23,8 @@ if __name__ == "__main__":
     # Create an instance of the session class that queries all the
     # inherited state objects and order them by state id.
     session = Session()
-    result = session.query(State).order_by(State.id).first()
 
+    result = session.query(State).order_by(State.id).first()
     # Check if the row from the result is empty, print nothing
     # Else, fetch one row, and print the state id and name out.
     if result is None:

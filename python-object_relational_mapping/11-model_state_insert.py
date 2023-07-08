@@ -25,7 +25,7 @@ if __name__ == "__main__":
     # adding the new state.
     session = Session()
     # the state to be added, create a new state obj before addition
-    added_state = State(name= 'Louisiana')
+    added_state = State(name='Louisiana')
     # add the new state to the session.
     session.add(added_state)
     # Commit the change to the session before proceeding

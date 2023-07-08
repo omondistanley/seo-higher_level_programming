@@ -18,7 +18,7 @@ if __name__ == "__main__":
                            .format(argv[1], argv[2], argv[3]))
 
     # Create a sessionmaker class bound to the engine object,
-    Session = sessionmaaker(bind=engine)
+    Session = sessionmaker(bind=engine)
     # Create an instance of session class that queries the state objs.
     session = Session()
     # The query checks and filters with those with letter a

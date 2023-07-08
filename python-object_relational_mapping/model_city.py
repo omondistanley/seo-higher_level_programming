@@ -11,6 +11,7 @@
 from sqlalchemy import Column, Integer, String
 from model_state import Base
 from sqlalchemy.orm import ForeignKey
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 

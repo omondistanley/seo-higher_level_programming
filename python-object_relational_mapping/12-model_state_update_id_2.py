@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session()
     state = session.query(State).filter(State.id == 2).first()
     # Update the name to new Mexico.
-    state.name = 'New Mexico'
+    state.name = "New Mexico"
 
     # Commit the change of the session to the database,
     session.commit()

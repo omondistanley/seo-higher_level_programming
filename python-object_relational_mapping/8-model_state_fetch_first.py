@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # The arguments are taken in from the command line
     # Connect the script to a MySQL server on a localhost using the
     # engine object.
-    engine = create_engine('mysql+mysql://{}:{}@localhost/{}'
+    engine = create_engine('mysql+mysql://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     # Create a session class bound to the engine obj.
     Session = sessionmaker(bind=engine)

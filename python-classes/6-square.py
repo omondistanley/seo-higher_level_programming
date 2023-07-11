@@ -56,3 +56,5 @@ class Square:
             for i in range(self._size):
                 print(" " * self._position[0], end="")
                 print("#" * self._size)
+
+__doc__ = """ The module describes a square class. """

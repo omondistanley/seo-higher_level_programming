@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 """
-    A class that defines a square based on 5-square.py class.
+    This module defines a square class.
+    The square class has the following attributes:
+        * size: The size of the square.
+        * position: The position of the square.
+        The square class has the following methods:
+            * area(): Returns the area of the square.
+            * size(): Returns the size of the square.
+            * size(value): Sets the size of the square.
+            * position(): Returns the position of the square.
+            * position(value): Sets the position of the square.
+            * my_print(): Prints the square
 """
 
 
@@ -43,7 +53,7 @@ class Square:
         if self._size == 0:
             print()
         else:
-            for i in range(slef._position[1]):
+            for i in range(self._position[1]):
                 print()
             for i in range(self._size):
                 print(" " * self._position[0] + '#' * self._size)

@@ -1,32 +1,26 @@
 #!/usr/bin/python3
 """
-    A class defining a square based on 5-square class with a private
-    instance attribute of size with a getter and setter property, a
-    private position attribute, private instance method that returns
-    the area and a print private instance method.
+    A class that defines a square based on 5-square.py class.
 """
 
 
 class Square:
-    """ The square class based on the earlier comments. """
-
+    """ The square class with size, position and area. """
     def __init__(self, size=0, position=(0, 0)):
-        """ Initalializes the size and position and sets the to
-                private. """
+        # Initialize and make the size and position private
         self._size = size
         self._position = position
 
     def area(self):
-        # calculates and returns the area of the square.
-        area = self._size * self._size
-        return area
-
+        # Calculates and returms the area of the square.
+        return self._size * self._size
+    
     def size(self):
-        # the size property
+        # gets the size property of the square.
         return self._size
 
     def size(self, value=0):
-        # checks if the value is an integer and grater than 0 to be set
+        # sets the size to a given integer greater than 0
         if type(value) == int:
             if value < 0:
                 raise ValueError("size must be => 0")
@@ -36,25 +30,16 @@ class Square:
             raise TypeError("size must be an integer")
 
     def position(self):
-        # the position property
-        return self._position
+        # gets the position property of the square.
+        return self._positon
 
     def position(self, value):
-        # check if the value is a tuple of integers greater than 0 and set to
-        # the being the position
-        if len(value) != 2 or not isinstance(value, tuple) or \
-                not all(isinstance(values, int) or \
-                not all(values >= 0 for values in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
+        # sets the position property. Check if value is a
+        # tuple of ints >=0.
+        if len(value) != 2 or not isinstance(value, tuple) or\
+                not all(isinstance(val, int) or\
+                not all(val >= 0 for val in value):
+            raise TypeError("position must be a tuple of 2\
+                     positive integers")
         else:
-            self._position = value
-
-    def my_print(self):
-        i, j = 0, 0
-        if self._size == 0:
-            print()
-            for i in range(self._size):
-                print(" " * self._position[0], end="")
-                print("#" * self._size)
-
-__doc__ = """ The module describes a square class. """
+        self._position = value

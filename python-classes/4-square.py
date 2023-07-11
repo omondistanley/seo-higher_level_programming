@@ -25,7 +25,7 @@ class Square:
     # @property to set the size attribute to a given value.
     def size(self, value):
         if type(value) == int and value >= 0:
-         self.__size = value
+            self.__size = value
         """ Size must be an integer and greater than zero. """
         if type(value) != int:
             raise TypeError("size must be an integer")

@@ -15,4 +15,5 @@ def divisible_by_2(my_list=[]):
         if value % 2 == 0:
             list.append(True)
         else:
-            return list
+            return list.append(False)
+    return list

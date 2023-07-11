@@ -43,3 +43,13 @@ class Square:
                      positive integers")
         else:
         self._position = value
+
+    def my_print(self):
+        # method that prints out the square details.
+        if self._size == 0:
+            print()
+        else:
+            for i in range(slef._position[1]):
+                print()
+            for i in range(self._size):
+                print(" " * self._position[0] + '#' *self._size)

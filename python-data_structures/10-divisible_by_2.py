@@ -9,7 +9,7 @@
     list and the rest evaluate to false before being added. """
 
 
-def divisble_by_2(my_list=[]):
+def divisible_by_2(my_list=[]):
     list = []
     for value in my_list:
         if value % 2 == 0:

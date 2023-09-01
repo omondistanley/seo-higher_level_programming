@@ -20,24 +20,24 @@ class Rectangle(Base):
         """ Setter property for the width attribute. """
         self.__width = val
         return self.__width
-    """ The getter property for the height """
     def height(self):
+        """ Getter property for the height """
         return self.__height
-    """ The setter property for the height """
     def height(self, val):
+        """ Setter property for the height """
         self.__height = val
         return self.__height
-    """ The getter property for x """
     def x(self):
-        return self.__X
-    """ The setter property for x """
+        """ Getter property for x """
+        return self.__x
     def x(self, val):
+        """ Setter property for the x attribute """
         self.__x = val
         return self.__x
-    """ The getter propety for y """
     def y(self):
+        """ Getter property for the y attribute """
         return self.__y
-    """ The setter property for y """
     def y(self, val):
+        """ Setter property for the y attribute """
         self.__y = val
         return self.__y

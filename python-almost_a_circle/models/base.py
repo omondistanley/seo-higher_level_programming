@@ -4,6 +4,8 @@
 """
 
 import json
+import csv
+import turtle
 
 class Base(Object):
 
@@ -22,4 +24,4 @@ class Base(Object):
             self.id = id
         """ If id is none, increase _nb_objects and set it to be the is. """
         else:
-          self.id = Base.__nb_objects++
+            self.id = Base.__nb_objects++

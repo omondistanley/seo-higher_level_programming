@@ -20,9 +20,9 @@ class Base(Object):
     """
     def __init__(self, id=None):
         """ Check if the id attribute is not null and set it to be the id attribute! """
+        """ If not increase __nb_objects and set it to the id variable.(private) """
         if id is not None:
             self.id = id
-        """ If id is none, increase _nb_objects and set it to be the is. """
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects

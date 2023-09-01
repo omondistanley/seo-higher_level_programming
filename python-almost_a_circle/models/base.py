@@ -7,7 +7,7 @@ import json
 import csv
 import turtle
 
-class Base(Object):
+class Base():
 
     """
         Private attribute _nb_objects = 0

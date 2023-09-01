@@ -18,7 +18,7 @@ class Base(Object):
         Constructor initializingg the id variables etc. The id is a 
         none-null integer.
     """
-    def __init__(self, id=none):
+    def __init__(self, id=None):
         """ Check if the id attribute is not null and set it to be the id attribute! """
         if id is not None:
             self.id = id

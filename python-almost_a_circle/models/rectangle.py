@@ -16,8 +16,8 @@ class Rectangle(Base):
     def width(self):
         """ Getter property for the width """
         return self.__width
-    """ The setter property for the width """
     def width(self, val):
+        """ Setter property for the width attribute. """
         self.__width = val
         return self.__width
     """ The getter property for the height """

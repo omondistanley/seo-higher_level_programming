@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """ A rectangle class that inherits from the base class. """
 
-Base = __import__('base').Base
-
+from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):

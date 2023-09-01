@@ -17,5 +17,9 @@ class Base(Object):
         none-null integer.
     """
     def __init__(self, id=none):
-
-
+        """ Check if the id attribute is not null and set it to be the id attribute! """
+        if id is not None:
+            self.id = id
+        """ If id is none, increase _nb_objects and set it to be the is. """
+        else:
+          self.id = Base.__nb_objects++

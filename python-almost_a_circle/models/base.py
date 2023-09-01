@@ -24,4 +24,5 @@ class Base(Object):
             self.id = id
         """ If id is none, increase _nb_objects and set it to be the is. """
         else:
-            self.id = Base.__nb_objects++
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
